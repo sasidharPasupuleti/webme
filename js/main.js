@@ -15,8 +15,13 @@ $(document).ready(function($) {
 	loader();
 
 	var modalShow = function() {
-		$('#myModal').modal('show');
-		// setTimeout(function() {$('#myModal').modal('hide')}, 3000);
+		// $('#myModal').modal('show');
+		$('#myModal').modal({
+			show:true,
+			backdrop:true,
+			keyboard:true
+		})
+		setTimeout(function() {$('#myModal').modal('hide')}, 6500);
 
 		// setTimeout(function() { 
 		// 	$('#myModal').modal('hide')
@@ -51,6 +56,7 @@ $(document).ready(function($) {
 
 	// scroll
 	var scrollWindow = function() {
+		// $('#myModal').modal('hide');
 		$(window).scroll(function(){
 			var $w = $(this),
 					st = $w.scrollTop(),
